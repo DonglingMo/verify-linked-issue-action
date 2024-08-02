@@ -4,6 +4,7 @@ on:
   pull_request:
     types: [edited, synchronize, opened, reopened]
   check_run:
+    types: [requested]
 
 jobs:
   verify_linked_issue:
@@ -13,11 +14,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Verify Linked Issue
-        uses: ./ 
+        uses: ./  # 指向你的本地 Action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      
-
-    
