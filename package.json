@@ -24,5 +24,9 @@
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
     "issue-parser": "^6.0.0"
+  },
+  "engines": {
+    "node": "20.x"
   }
+
 }
