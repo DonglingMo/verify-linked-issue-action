@@ -1,4 +1,4 @@
-name: 'Verify Linked Issue (Improved & Maintained)'
+name: 'Verify Linked Issue (Improved20)'
 description: 'A GitHub action that verifies a pull request contains a reference to an issue.'
 branding:
     icon: check-square
